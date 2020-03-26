@@ -1,8 +1,20 @@
 [AccessibilityButtonController](../android/accessibilityservice/AccessibilityButtonController.java)
 
+```
+系统界面中可用服务按钮控制器。不知道在哪
+```
+
 [AccessibilityService](../android/accessibilityservice/AccessibilityService.java)
 
+```
+辅助服务，用于辅助残障人士使用手机。由系统管理生命周期，接收特定的系统事件，只有当用户手动去设置里打开辅助服务的时候才会有用。
+```
+
 [AccessibilityServiceInfo](../android/accessibilityservice/AccessibilityServiceInfo.java)
+
+```
+辅助服务事件的封装
+```
 
 [AbstractAccountAuthenticator](../android/accounts/AbstractAccountAuthenticator.java)
 
@@ -24,47 +36,138 @@
 
 [AuthenticatorException](../android/accounts/AuthenticatorException.java)
 
+```
+以上都是Account相关的类，忽略。
+```
+
 [Animator](../android/animation/Animator.java)
+
+```
+动画的父类，提供了start,pause,end等生命周期及其回调方法的声明，抽象类。
+```
 
 [AnimatorInflater](../android/animation/AnimatorInflater.java)
 
+```
+顾名思义，由xml配置文件inflate出动画Animator
+```
+
 [AnimatorListenerAdapter](../android/animation/AnimatorListenerAdapter.java)
+
+```
+动画监听器，未提供具体实现。
+```
 
 [AnimatorSet](../android/animation/AnimatorSet.java)
 
+```
+动画的集合。可以让多个动画通过同时播放、顺序播放以及延迟播放。
+```
+
 [ArgbEvaluator](../android/animation/ArgbEvaluator.java)
+
+```
+颜色生成器。由一个初始颜色，一个终点颜色，一个float的百分比来生成一个颜色，常用于颜色动画中渐变颜色的生成。
+```
 
 [ActionBar](../android/app/ActionBar.java)
 
+```
+应用标题栏、状态栏。在5.0以上用toolbar作为典型代表。
+```
+
 [Activity](../android/app/Activity.java)
+
+```
+一般来说，是应用内供用户交互的窗口，具备多个生命周期，一般来说，在oncreate中完成设置初始化，在OnDestory当中注销使用到的资源文件。在onstart和onstop生命周期之间保持可见性，在onresume和onpause之间保持可交互。可以在onpause回调中提交用户的数据。注意，Activity是用栈ADT的方式进行管理的。
+```
 
 [ActivityGroup](../android/app/ActivityGroup.java)
 
+```
+已废弃
+```
+
 [ActivityManager](../android/app/ActivityManager.java)
+
+```
+一般来说，用于test和debug，获取一些应用的信息。
+```
 
 [ActivityOptions](../android/app/ActivityOptions.java)
 
+```
+启动Activity时传递的配置参数。可以用于生成很多Activity转场动画。
+```
+
 [AlarmManager](../android/app/AlarmManager.java)
+
+```
+系统定时服务，定一个时间，系统发出唤醒的广播，用户的广播接收器接收到消息，即使在应用未运行的时候，也可以执行任务。但要注意的是，在onReceive中，return 之前是可以保证CPU一直是wake up 的，但是如果其实执行了异步的任务，那么很可能手机会陷入睡眠，比如启动一个service，要用另外的wake up 保证service启动之前手机不会陷入休眠。
+```
 
 [AlertDialog](../android/app/AlertDialog.java)
 
+```
+弹出式对话框，会有一个、两个或者三个按钮，这个没法改变，但是弹窗content可以自定义视图，也可以通过setMessage方法直接设置内容
+```
+
 [AliasActivity](../android/app/AliasActivity.java)
+
+```
+为某个Activity在桌面创建一个快捷入口。
+```
 
 [AppComponentFactory](../android/app/AppComponentFactory.java)
 
+```
+Interface used to control the instantiation of manifest elements.
+only intended to provide a hook for instantiation.
+This can be used to perform things such as dependency injection or class loader changes to these classes.
+```
+
 [Application](../android/app/Application.java)
+
+```
+用于维护应用全局的变量。于应用进程创建后，优先其他任何类初始化。
+```
 
 [ApplicationErrorReport](../android/app/ApplicationErrorReport.java)
 
+```
+描述应用错误。分别有以下几种：1.应用未初始化2.应用崩溃3.应用ANR4.应用耗电过高5.应用未回收不用的service
+```
+
 [AppOpsManager](../android/app/AppOpsManager.java)
+
+```
+/**
+ * API for interacting with "application operation" tracking.
+ *
+ * <p>This API is not generally intended for third party application developers; most
+ * features are only available to system applications.
+ */
+```
 
 [AssistContent](../android/app/assist/AssistContent.java)
 
 [AssistStructure](../android/app/assist/AssistStructure.java)
 
+```
+google assist ,忽略。
+```
+
 [AuthenticationRequiredException](../android/app/AuthenticationRequiredException.java)
 
+```
+SecurityException 的一种
+```
+
 [AutomaticZenRule](../android/app/AutomaticZenRule.java)
+
+```
+Do not Disturb Mode,免打扰模式。参考三星手机的免打扰效果。
+```
 
 [AppWidgetHost](../android/appwidget/AppWidgetHost.java)
 
